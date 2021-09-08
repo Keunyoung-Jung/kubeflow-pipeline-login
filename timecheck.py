@@ -14,6 +14,9 @@ def time_checker(func) :
         # function variable
         arg_str = ', '.join(repr(arg) for arg in args)
         # print result
-        print('[%0.5fs %s(%s) -> %r' % (et,name,arg_str,result))
+        print('-'*20)
+        print('spend time [%0.5fs]' % (et))
+        print('func info [%s](%s)' % (name,arg_str))
+        print('-'*20)
         return result
     return perf_clocked 
